@@ -1,0 +1,32 @@
+<!--FORMULARIO PARA EL REGISTRO-->
+<div>
+    <center>
+        <h3 class="fs-5 ">Programa en lenguaje Nodejs con 4 API que tengan la funcionalidad: Insertar, Eliminar, Actualizar y Buscar varios registros.
+        </h3>
+    </center>    
+</div><br>
+        <div class="container col-md-10">
+            <h5>ENTRADA DE DATOS</h5>
+            <hr>
+            <form class="row g-3 " action="/usuario" method="POST">
+             <input type="hidden" name="_id" value="{{usuario._id}}">
+             <div class="col-md-3">
+                <label for="id">ID-USUARIO:</label>
+                <input type="text" id="id" name="id" class="form-control" placeholder=" ID del usuario" value="{{usuario.id}}">
+             </div>
+             <div class="col-md-4">
+                <label for="nombre">NOMBRE:</label>
+                <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre del usuario" value="{{usuario.nombre}}">
+             </div>
+             <div class="col-md-4">
+                <label for="apellido">APELLIDO:</label>
+                <input type="text" id="apellido" name="apellido" class="form-control" placeholder="Apellido del usuario" value="{{usuario.apellido}}">
+             </div>
+             <div class="form-group">
+                <button class="btn btn-success" type="submit">Enviar</button>
+                <a class="btn btn-secondary" href="usuario/lista"> Consultar</a>
+             </div>
+            </form><br><br>
+        </div>
+
+       

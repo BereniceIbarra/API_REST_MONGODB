@@ -1,0 +1,28 @@
+        <!--Listar Usuarios-->
+        
+        <h2>Lista de usuarios registrados</h2>
+        <table class="table table-bordered table-success table-hover">
+            <thead class="thead-inverse">
+                <tr>
+                    <th class="text-center">ID</th>
+                    <th class="text-center">Nombre</th>
+                    <th class="text-center">Apellido</th>
+                     <th class="text-center">Opciones</th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                {{#each lista}}
+                <tr>
+                    <td>{{this.id}}</td>
+                    <td>{{this.nombre}}</td>
+                    <td>{{this.apellido}}</td>
+                    <td>
+                        <a href="/usuario/{{this._id}}"><i class="material-icons" style="font-size:24px">edit</i></a>
+                        <a href="/usuario/delete/{{this._id}}"><i class="material-icons" style="font-size:24px">delete</i></a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+
+ <h3><a class="btn btn-secondary" href="/usuario">Inicio</a></h3>
